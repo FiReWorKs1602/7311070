@@ -9,7 +9,7 @@ comtext = f.read()
 f.close()
 ```
 You can determine the workspace by checking the terminal's current path.
-![image|50](https://github.com/user-attachments/assets/73aed23b-6c82-4dbd-8761-fd3c9c29f8b5) ![image|50](https://github.com/user-attachments/assets/9e0da189-b307-4688-99a2-d9766e2fc214)
+![image](https://github.com/user-attachments/assets/73aed23b-6c82-4dbd-8761-fd3c9c29f8b5){width=30 height=30} ![image|50](https://github.com/user-attachments/assets/9e0da189-b307-4688-99a2-d9766e2fc214)
 
 
 
