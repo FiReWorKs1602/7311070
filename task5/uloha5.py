@@ -7,7 +7,7 @@ while True:
     else:
         break
 
-answer = ["15", "27", "49", '9', "18", "2"]
+answer = []
 while len(answer) != 6:
     num = str(random.randint(1,49))
     if num not in answer:
