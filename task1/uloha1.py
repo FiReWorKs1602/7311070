@@ -5,11 +5,8 @@ with open("./task1/jump_to_distance.txt", "r") as f:
     Max_num = " "    
     lst = f.read().split("\n")
     for i in lst:
-        if i.split()[1] not in country:
-            country.append(i.split()[1])
-            player_num[i.split()[1]] = 1
-        else:
-            player_num[i.split()[1]] += 1
+        country.append(i.split()[1])
+        player_num[i.split()[1]] = player_num.get(i.split()[1], 0) + 1
 
         if Max_num < max(i.split()[2:]):
             winner = []
@@ -21,3 +18,4 @@ with open("./task1/jump_to_distance.txt", "r") as f:
     print(country)
     print(player_num)
     print(winner)
+ 

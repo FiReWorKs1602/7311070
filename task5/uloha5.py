@@ -1,11 +1,8 @@
 import random
 
-while True:
+guess = []
+while len(set(guess)) != 6 or any(int(num) < 1 or int(num) > 49 for num in guess):
     guess = input("enter 6 numbers: ").split()
-    if len(set(guess)) != 6 or any(int(num) < 1 or int(num) > 49 for num in guess):
-        continue
-    else:
-        break
 
 answer = []
 while len(answer) != 6:

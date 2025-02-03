@@ -2,36 +2,23 @@
 
 
 with open("./task3/hada.txt", "r") as file:
-    data = file.read()
-    steps = data.split("\n")
-    print(len(data.replace("\n", "")))
+    data = file.read().split("\n")
+    print(len(data))
     
-
-Max_s = 0
-for i in range(len(steps)):
-    if len(steps[i]) > Max_s:
-        Max_s = len(steps[i])
-        idx = i
-print(idx+1)
+steps_each_game = []
+for hry in data:
+    steps_each_game.append(len(hry))
+print(max(steps_each_game))
 
 with open("./task3/hada.txt", "r") as file:
     for player in file.readlines():
-        repeat = player[0]
-        count = 0
-        for step in player:
-            if repeat == step:
+        player = player.strip()
+        count = 1
+        for step in range(1, len(player)):
+            if player[step] == player[step-1]:
                 count += 1
             else:
                 copy = open("./task3/hada_copy.txt", "a")
-                copy.write(f"{repeat} {count} ")
-                repeat = step
+                copy.write(f"{player[step-1]} {count} ")
                 count = 1
-        copy.write("\n")
-
-        
-        
-
-
-
-
-
+        copy.write(f"{player[-1]} {count}\n")
