@@ -26,4 +26,4 @@ for day, line in enumerate(schedule):
         people = int(line.split()[0])
         code.append(people)
 
-print("na ", code, "den su student menej ako 20")
+print( code, " studenti zobrali m")

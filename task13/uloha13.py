@@ -18,10 +18,11 @@ def get_value():
     for building in range(len(structures)-1):
         w = int(structures[building][0])
         h = int(structures[building][1])
+        print(h)
         difference = h-int(structures[building+1][1])
-        if (difference>value):
+        if (difference>value and int(structures[building+1][1]) != 0):
             cv.create_rectangle(x+w,y-h+difference,x+w,y-h, outline="red")
-        if (difference < -value):
+        if (difference < -value and int(structures[building][1]) != 0):
             cv.create_rectangle(x+w,y-h,x+w,y-h+difference , outline="red")
         x += w
 

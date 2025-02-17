@@ -12,7 +12,8 @@ def checker(random_code):
 
     return num 
 
-random_code += str(checker(random_code)) 
+random_code += str(checker(random_code))
+
 with open("./task18/kod_a.txt","r") as file:
     for i in file.readlines():
         checker(i.strip('\n'))

@@ -1,1 +1,0 @@
-with open("./task17/ciarkovy_kod_1.txt", "r") as file:

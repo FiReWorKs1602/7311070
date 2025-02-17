@@ -17,26 +17,27 @@ def generate_code(code, base_x = 10, base_y = 150):
             cv.create_text(base_x+10,base_y-10, text=f"{code}")
         base_x += spacing_x
 
-root = tk.Tk()
-cv = tk.Canvas(root, height=500, width=500)
-cv.pack()
-
-
-generate_code(random_code)
 current_index = 0
 def switch_code(event):
     cv.delete("all")
     global current_index
     with open("./task17/ciarkovy_kod_1.txt", "r") as file:
         lines = file.readlines()
-        if current_index >= len(lines):
-            current_index = 0  # Restart if end of file is reached
-        generate_code(lines[current_index].strip())
-        generate_code(lines[current_index+1].strip(), 100)
-        generate_code(lines[current_index+2].strip(), base_y=300)
-        generate_code(lines[current_index+3].strip(), 100, base_y=300)
-        current_index += 4
- 
+        
+        try:
+            generate_code(lines[current_index].strip())
+            generate_code(lines[current_index+1].strip(), 100)
+            generate_code(lines[current_index+2].strip(), base_y=300)
+            generate_code(lines[current_index+3].strip(), 100, base_y=300)
+            current_index += 4
+        except:
+            current_index = 0
+
+root = tk.Tk()
+cv = tk.Canvas(root, height=500, width=500)
+cv.pack()
+
+generate_code(random_code)
 root.bind("<space>", switch_code)
 
 root.mainloop()

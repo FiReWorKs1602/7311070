@@ -28,7 +28,7 @@ while True:
         else:
             canvas.create_rectangle(bar_x, y+10, bar_x+num*5, y-10, fill="red")
     
-    user_input = int(input())
+    user_input = int(input("enter your vote: "))
     if user_input  <= 3:
         votes[user_input-1] += 1
         canvas.delete("all")

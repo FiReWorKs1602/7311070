@@ -29,7 +29,6 @@ root = tk.Tk()
 cv = tk.Canvas(root, width=400, height=300, bg="white")
 cv.pack()
 
-# Scale factors for visualization
 bar_width = 13
 x_spacing = 16.5
 y_base = 270
@@ -48,5 +47,5 @@ for hour, total_count in all_cos.items():
     # Add hour labels below the bars
     cv.create_text(x_start + bar_width // 2, y_base + 10, text=hour, font=("Arial", 8))
 
-# Start the Tkinter main loop
+
 root.mainloop()
