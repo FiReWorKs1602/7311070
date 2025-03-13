@@ -1,0 +1,10 @@
+Informatika pre stredne skoly
+1001 2901 1502 2502 0503 1503
+Praca s textom
+1501 2802 1003 2803 1505
+Praca s tabulkami
+1402 1802 1004 2104 1205 3105
+Praca s grafikou
+1604 2504 0105 1305
+Praca s internetom
+0803 2704 0405

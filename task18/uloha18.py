@@ -1,6 +1,6 @@
 import random
 
-random_code = str(24687035) #str(random.randint(10000000, 99999999))
+
 def checker(random_code):
     bit1 = (int(random_code[0])+int(random_code[1])+int(random_code[2])+int(random_code[3]))%2
     bit2 = (int(random_code[2])+int(random_code[3])+int(random_code[4])+int(random_code[5]))%2
@@ -12,6 +12,7 @@ def checker(random_code):
 
     return num 
 
+random_code = str(random.randint(10000000, 99999999))
 random_code += str(checker(random_code))
 
 with open("./task18/kod_a.txt","r") as file:
