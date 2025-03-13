@@ -3,10 +3,10 @@ import tkinter as tk
 with open("./task21/krizovka1-1.txt", "r") as f:
     data = f.read().split("\n")
 
-cross_pos = []
+answer_pos = []
 words = []
 for line in data:
-    cross_pos.append(line.split()[0]) 
+    answer_pos.append(line.split()[0]) 
     words.append(line.split()[1])
 
 
@@ -26,12 +26,12 @@ canvas.pack()
 # Iterate through each word and its position
 def krizovka(BASE_X, BASE_Y, text = False):
     for pos, word in enumerate(words):
-        shift = LETTER_SPACING * (len(words[0]) - int(cross_pos[pos]))
+        shift = LETTER_SPACING * (len(words[0]) - int(answer_pos[pos]))
         for idx, letter in enumerate(word):
             x = BASE_X + LETTER_SPACING * idx + shift
             y = BASE_Y
             
-            if idx == int(cross_pos[pos]) - 1:
+            if idx == int(answer_pos[pos]) - 1:
                 canvas.create_rectangle(x - RECTANGLE_SIZE, y - RECTANGLE_SIZE, x + RECTANGLE_SIZE, y + RECTANGLE_SIZE, fill="gray")
             else:
                 canvas.create_rectangle(x - RECTANGLE_SIZE, y - RECTANGLE_SIZE,x + RECTANGLE_SIZE, y + RECTANGLE_SIZE)
