@@ -29,9 +29,10 @@ def generate_ship(l_map =l_map)->None:
         if l_map[select_line][i:i+3] == "000" and (l_map[select_line][i-1]!="2" or i == 0):
             temp+=l_map[select_line][:i]+"222"+l_map[select_line][i+3:]
             break
+        
     if temp:
-        create_map(l_map)
         l_map[select_line]=temp
+        create_map(l_map)
     else:
         try:
             generate_ship()
