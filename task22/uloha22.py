@@ -27,8 +27,8 @@ count = 0
 def swich_info(event):
     canvas.delete("all")
     global count
-    for idx in range(len(map_x)-2):# 1261 
-        canvas.create_line(map_x[idx], map_y[idx]+90, map_x[idx+1], map_y[idx+1]+90)
+    for idx in range(0,len(map_x)):# 1261
+        canvas.create_oval(map_x[idx], map_y[idx]+90, map_x[idx], map_y[idx]+90)
 
     try:
         canvas.create_oval(ski_cor[count][0]-5,ski_cor[count][1]-5,ski_cor[count][0]+5,ski_cor[count][1]+5, fill="black")
