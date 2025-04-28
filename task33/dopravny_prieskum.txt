@@ -1,0 +1,11 @@
+10;0;Štúrovo nám.
+5;0;Mestský park
+50;1;Dargovská
+2;0;Nemocnica
+10;3;Bratská
+1;1;Mestský úrad
+15;10;Partizánska
+1;2;Bernolákova
+21;0;Kúpalisko
+0;7;Štúrova
+0;91;Autobusová stanica
