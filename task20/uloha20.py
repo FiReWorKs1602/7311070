@@ -1,5 +1,4 @@
-import time
-
+ 
 with open("./task20/knihy.txt", "r")as file:
     books = []
     dates = []
@@ -9,7 +8,6 @@ with open("./task20/knihy.txt", "r")as file:
         else:          # second line
             dates.append(data.strip())
 
-
 for idx, temp in enumerate(dates):
     notification = temp.split()
     if len(notification)%2!=0:
@@ -17,20 +15,10 @@ for idx, temp in enumerate(dates):
 
 max_length = max(len(line.split()) for line in dates)
 longest_lines = "\n".join([books[idx] for idx,line in enumerate(dates) if len(line.split()) == max_length])
-print()
 print(longest_lines)
 
 # date time
 from datetime import datetime
-
-# Vstupné dáta
-data = [
-    "1001 2901 1502 2502 0503 1503",
-    "1501 2802 1003 2803 1505",
-    "1402 1802 1004 2104 1205 3105",
-    "1604 2504 0105 1305",
-    "0803 2704 0405"
-]
 
 # Funkcia na výpočet počtu dní medzi dvoma dátumami
 def calculate_days(date1, date2):

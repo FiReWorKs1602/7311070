@@ -15,7 +15,7 @@ print(answer)
 print(set(guess) & set(answer))
 print(len(set(guess) & set(answer)))
 
-with open("./task5/loteria_2.txt", "r") as f:
+with open("./task05/loteria_2.txt", "r") as f:
     player = {1:0,2:0,3:0,4:0,5:0,6:0}
     for i in f.read().split("\n"):
         if len(set(i.split()) & set(answer)) != 0:

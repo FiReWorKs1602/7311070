@@ -1,6 +1,6 @@
 
 
-with open("./task4/meteo_stanice.txt", "r") as file:
+with open("./task04/meteo_stanice.txt", "r") as file:
     num_train = file.read().split("\n")
 
 print(len(num_train))

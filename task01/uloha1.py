@@ -1,4 +1,4 @@
-with open("./task1/jump_to_distance.txt", "r") as f:
+with open("./task01/jump_to_distance.txt", "r") as f:
     lst = f.read().split("\n")
 
 country = []

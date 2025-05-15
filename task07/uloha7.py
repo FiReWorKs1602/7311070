@@ -1,6 +1,6 @@
 import tkinter as tk
 
-with open("./task7/trasa_linky_metra.txt", "r") as f:
+with open("./task07/trasa_linky_metra.txt", "r") as f:
     data = f.read().split("\n")
 
 cv = tk.Canvas(width=450, height=300)

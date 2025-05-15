@@ -1,7 +1,7 @@
 import tkinter as tk
 
 # Read the file
-with open("./task6/spokojnost_1.txt", "r", encoding="utf-8") as f:
+with open("./task06/spokojnost_1.txt", "r", encoding="utf-8") as f:
     data = f.read()
 
 # Count occurrences of "nie"
