@@ -8,6 +8,7 @@ with open("./task20/knihy.txt", "r")as file:
         else:          # second line
             dates.append(data.strip())
 
+# if dates is odd
 for idx, temp in enumerate(dates):
     notification = temp.split()
     if len(notification)%2!=0:
